@@ -1,0 +1,12 @@
+const express=require("express")
+const router=express.Router()
+const {createEmployee}=require("../controllers/createEmployee")
+const {getAllEmployee,getSingleEmployee}=require("../controllers/getallemp")
+const {updateEmployee}=require("../controllers/Updateemp")
+const {deleteEmployee}=require("../controllers/delete")
+router.post("/createemployee",createEmployee)
+router.get("/getallemployee",getAllEmployee)
+router.get("/getemployee/:id",getSingleEmployee)
+router.put("/updateemp",updateEmployee)
+router.delete("/deleteemp",deleteEmployee)
+module.exports=router
